@@ -1,0 +1,264 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Greeting Section with Transparent Background Image */
+#greeting {
+    position: relative;
+    min-height: 100vh; /* Full screen */
+    background: url('uem\ img.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Adding a semi-transparent overlay on the background image for better visibility */
+#greeting::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Reduced opacity for better contrast */
+    z-index: -1;
+}
+
+/* Greeting Title */
+.greeting-title {
+    font-size: 2.5em; /* Reduced from 4em */
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+    animation: zoomIn 2s ease-in-out;
+    letter-spacing: 3px;
+}
+
+/* Greeting Subtitle */
+.greeting-subtitle {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Button Styling */
+.lets-go-btn {
+    padding: 15px 30px;
+    background-color: #ff5722;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.lets-go-btn:hover {
+    background-color: #e64a19;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+}
+
+/* LinkedIn Button */
+.linkedin-btn {
+    padding: 15px 30px;
+    background-color: #0077b5;
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.linkedin-btn:hover {
+    background-color: #ffcc00;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Menu Section */
+#menu {
+    display: none;
+    padding: 30px;
+    background: linear-gradient(135deg, #ff4081, #ff5722);
+    color: white;
+    animation: fadeInMenu 2s ease-in-out;
+}
+
+/* Shop Description */
+.shop-description {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    animation: slideIn 1.5s ease-out;
+}
+
+.shop-description h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.shop-description p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Menu Container - Single Row */
+.menu-container {
+    display: flex;
+    justify-content: space-between; /* Ensures the items are evenly spaced in a row */
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows for wrapping on smaller screens */
+}
+
+/* Category Styling */
+.category {
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    width: 30%; /* Ensures the categories stay side by side in a row */
+    min-width: 280px; /* Prevents them from getting too small */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.category:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    background-color: #388E3C;
+}
+
+/* Category Header */
+.category h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* Item Styling */
+.item {
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    color: #333;
+    text-align: center;
+}
+
+.item:hover {
+    background-color: #ff5722;
+    color: white;
+}
+
+.item h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #3e2723;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInMenu {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInMenuItems {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .greeting-title {
+        font-size: 3em; /* Adjusted for smaller screens */
+    }
+
+    .greeting-subtitle {
+        font-size: 1.5em;
+    }
+
+    /* Menu Section */
+    .menu-container {
+        flex-direction: column; /* Stack menu items vertically on smaller screens */
+        align-items: center; /* Centering the items */
+    }
+
+    .category {
+        width: 80%; /* More room for smaller screens */
+        margin: 10px 0;
+    }
+}
