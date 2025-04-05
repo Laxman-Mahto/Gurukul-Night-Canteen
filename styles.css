@@ -33,7 +33,7 @@ body, html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4); /* Reduced opacity for better contrast */
+    background: rgba(0, 0, 0, 0.4); 
     z-index: -1;
 }
 
@@ -123,11 +123,11 @@ body, html {
 /* Menu Container - Single Row */
 .menu-container {
     display: flex;
-    justify-content: space-between; /* Ensures the items are evenly spaced in a row */
+    justify-content: space-between; 
     align-items: flex-start;
     padding: 20px;
     gap: 20px;
-    flex-wrap: wrap; /* Allows for wrapping on smaller screens */
+    flex-wrap: wrap; 
 }
 
 /* Category Styling */
@@ -137,8 +137,8 @@ body, html {
     color: white;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    width: 30%; /* Ensures the categories stay side by side in a row */
-    min-width: 280px; /* Prevents them from getting too small */
+    width: 30%; 
+    min-width: 280px; 
     text-align: center;
     display: flex;
     justify-content: center;
@@ -244,7 +244,7 @@ footer {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .greeting-title {
-        font-size: 3em; /* Adjusted for smaller screens */
+        font-size: 3em; 
     }
 
     .greeting-subtitle {
@@ -253,12 +253,12 @@ footer {
 
     /* Menu Section */
     .menu-container {
-        flex-direction: column; /* Stack menu items vertically on smaller screens */
-        align-items: center; /* Centering the items */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .category {
-        width: 80%; /* More room for smaller screens */
+        width: 80%; 
         margin: 10px 0;
     }
 }
